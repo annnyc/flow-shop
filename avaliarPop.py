@@ -1,0 +1,2 @@
+def avaliarPop(populacao):
+  pass
