@@ -130,21 +130,21 @@ def findWorstSolution(pop, data):
     return worstSolInd, worstSol
 
 if __name__ == '__main__':
-    filename = "tai20_5.txt"
+    filename = "tai200_10.txt"
     f = open(filename, 'r')
     l = f.readline().split()
+
     # Quantidade de tarefas
     Nj = int(l[1])
     # Quantidade de máquinas
     Nm = int(l[0])
-    # Probabilidade de crossover
-    Pc = 1.0
+
     # Probabilidade de mutação
     Pm = 0.05
     # Critério de parada (quantidade de gerações)
-    stopGeneration = 1000
+    stopGeneration = 50000
     # Critério de parada (tempo máximo de execução)
-    stopTime = 5 * (60)  # 5 minutos
+    stopTime = 20 * 60  # 20 minutos
 
     data = []
 
