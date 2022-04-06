@@ -42,7 +42,7 @@ def selecionarPop(populacao: List[List[int]], aptidaoPop: List[int], POPULATION_
     aptidao_ordenada = sorted(nova_aptidao, reverse=True)
 
     # 1/4 dos melhores pais serão selecionados
-    valores_das_melhores_solucoes = set(aptidao_ordenada[POPULATION_SIZE // math.floor(TAXA_DA_PROXIMA_GERAÇÃO):])
+    valores_das_melhores_solucoes = set(aptidao_ordenada[POPULATION_SIZE // math.floor(TAXA_DA_PROXIMA_GERAÇÃO * 100):])
 
     # indices das melhores solucoes
     indices_das_melhores_solucoes = []

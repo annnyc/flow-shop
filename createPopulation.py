@@ -12,5 +12,3 @@ def createPopulation(number_of_jobs: int, population_size: int):
         population.append([int(job + 1) for job in novo_item])
 
     return population
-
-print(createPopulation(3, 5))
