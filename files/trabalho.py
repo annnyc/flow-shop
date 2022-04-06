@@ -51,6 +51,7 @@ def selecaoPais(pop, data):
 
     return parents
 
+
 def crossover(parents, Nj):
     pos = list(np.random.permutation(np.arange(Nj - 1) + 1)[:2])
 
