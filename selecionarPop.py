@@ -1,3 +1,4 @@
+import math
 import random
 from typing import List, Tuple
 
@@ -35,13 +36,13 @@ def selecionarPares(indices_para_selecionar: List[int]):
 
 
 ## retorna pares de 1/4 dos melhores pais
-def selecionarPop(populacao: List[List[int]], aptidaoPop: List[int], POPULATION_SIZE: int) -> List[Tuple[int, int]]:
+def selecionarPop(populacao: List[List[int]], aptidaoPop: List[int], POPULATION_SIZE: int, TAXA_DA_PROXIMA_GERAÇÃO) -> List[Tuple[int, int]]:
     nova_populacao, nova_aptidao = removerRepetidos(populacao, aptidaoPop)
 
     aptidao_ordenada = sorted(nova_aptidao, reverse=True)
 
     # 1/4 dos melhores pais serão selecionados
-    valores_das_melhores_solucoes = set(aptidao_ordenada[POPULATION_SIZE // 4:])
+    valores_das_melhores_solucoes = set(aptidao_ordenada[POPULATION_SIZE // math.floor(TAXA_DA_PROXIMA_GERAÇÃO):])
 
     # indices das melhores solucoes
     indices_das_melhores_solucoes = []
